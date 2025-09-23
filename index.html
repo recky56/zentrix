@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zentrix Robotics | Inovação em Robótica</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'zentrix-blue': '#00f0ff',
+                        'zentrix-purple': '#9d00ff',
+                        'zentrix-dark': '#0a0a1a',
+                    },
+                    fontFamily: {
+                        'sans': ['"Exo 2"', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        .gradient-text {
+            background: linear-gradient(90deg, #00f0ff 0%, #9d00ff 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .glow-effect {
+            box-shadow: 0 0 15px rgba(157, 0, 255, 0.5);
+        }
+        .glow-effect-blue {
+            box-shadow: 0 0 15px rgba(0, 240, 255, 0.5);
+        }
+        .hero-bg {
+            background: radial-gradient(circle at center, rgba(10,10,26,0.9) 0%, rgba(10,10,26,1) 70%);
+        }
+    </style>
+</head>
+<body class="bg-zentrix-dark text-white font-sans overflow-x-hidden">
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-zentrix-dark/90 backdrop-blur-md border-b border-zentrix-purple/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <span class="text-2xl font-bold gradient-text">ZENTRIX</span>
+                    </div>
+                    <div class="hidden md:block">
+                        <div class="ml-10 flex items-baseline space-x-4">
+                            <a href="#" class="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-zentrix-blue transition">Home</a>
+                            <a href="#about" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white transition">Sobre</a>
+                            <a href="#product" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white transition">Produto</a>
+                            <a href="#team" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white transition">Equipe</a>
+                            <a href="#services" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white transition">Serviços</a>
+                            <a href="#contact" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white transition">Contato</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <button class="px-4 py-2 rounded-md text-sm font-medium bg-gradient-to-r from-zentrix-blue to-zentrix-purple text-white hover:opacity-90 transition">
+                        Contate-nos
+                    </button>
+                </div>
+                <div class="md:hidden">
+                    <button type="button" class="mobile-menu-button inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white focus:outline-none">
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-bg pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                        <span class="gradient-text">NOVA ERA</span><br>
+                        <span class="text-white">DA ROBÓTICA</span>
+                    </h1>
+                    <h2 class="text-2xl md:text-3xl font-semibold text-zentrix-blue mb-6">Apresentando o <span class="gradient-text">Z-RX9000</span></h2>
+                    <p class="text-gray-300 mb-8 text-lg leading-relaxed">
+                        Equipado com IA de última geração e aprendizado autônomo, este robô foi criado para oferecer ensino remoto inclusivo, ajudando especialmente alunos com dificuldades físicas e etc.. Ele ministra aulas personalizadas, responde dúvidas em tempo real e adapta o conteúdo ao ritmo de cada estudante.
+                    </p>
+                    <div class="flex space-x-4">
+                        <button class="px-6 py-3 rounded-md text-sm font-medium bg-gradient-to-r from-zentrix-blue to-zentrix-purple text-white hover:opacity-90 transition glow-effect">
+                            Saiba Mais
+                        </button>
+                        
+                    </div>
+                </div>
+                <div data-aos="fade-left" class="flex justify-center">
+                    <div class="relative">
+                        <div class="absolute -inset-4 bg-gradient-to-r from-zentrix-blue to-zentrix-purple rounded-2xl opacity-20 blur-lg"></div>
+                        <img src="fotos/ChatGPT Image 23 de set. de 2025, 06_22_12.png" alt="Z-RX9000 Robô" class="relative rounded-xl w-full max-w-md glow-effect-blue">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-4 sm:px-6 lg:px-8 bg-zentrix-dark border-t border-zentrix-purple/10">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                    <span class="gradient-text">SOBRE NÓS</span>
+                </h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-zentrix-blue to-zentrix-purple mx-auto mb-6"></div>
+                <p class="text-gray-300 max-w-3xl mx-auto text-lg">
+                    Pioneiros em soluções robóticas para um futuro mais inteligente e eficiente.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <h3 class="text-2xl font-semibold mb-4 text-zentrix-blue">Nossa Missão</h3>
+                    <p class="text-gray-300 mb-6 leading-relaxed">
+                        Na Zentrix Robotics, buscamos revolucionar a interação entre humanos e máquinas através de tecnologias inovadoras que transformam indústrias e melhoram vidas.
+                    </p>
+                    <p class="text-gray-300 mb-6 leading-relaxed">
+                        Fundada em 2015, nossa empresa já desenvolveu mais de 50 soluções robóticas para setores como saúde, manufatura e serviços.
+                    </p>
+                    <div class="flex items-center space-x-4">
+                        <div class="p-3 rounded-full bg-zentrix-dark border border-zentrix-purple/20">
+                            <i data-feather="award" class="text-zentrix-blue"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Prêmio de Inovação 2023</h4>
+                            <p class="text-sm text-gray-400">Melhor Solução em IA</p>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-left" class="grid grid-cols-2 gap-4">
+                    <div class="bg-zentrix-dark/50 border border-zentrix-purple/10 rounded-xl p-6 hover:border-zentrix-blue/30 transition">
+                        <div class="w-12 h-12 bg-zentrix-blue/10 rounded-lg flex items-center justify-center mb-4">
+                            <i data-feather="cpu" class="text-zentrix-blue"></i>
+                        </div>
+                        <h4 class="font-semibold mb-2">Tecnologia Avançada</h4>
+                        <p class="text-sm text-gray-300">Utilizamos os mais modernos algoritmos de IA e aprendizado de máquina.</p>
+                    </div>
+                    <div class="bg-zentrix-dark/50 border border-zentrix-purple/10 rounded-xl p-6 hover:border-zentrix-blue/30 transition">
+                        <div class="w-12 h-12 bg-zentrix-purple/10 rounded-lg flex items-center justify-center mb-4">
+                            <i data-feather="shield" class="text-zentrix-purple"></i>
+                        </div>
+                        <h4 class="font-semibold mb-2">Segurança</h4>
+                        <p class="text-sm text-gray-300">Protocolos de segurança rigorosos em todos os nossos produtos.</p>
+                    </div>
+                    <div class="bg-zentrix-dark/50 border border-zentrix-purple/10 rounded-xl p-6 hover:border-zentrix-blue/30 transition">
+                        <div class="w-12 h-12 bg-zentrix-blue/10 rounded-lg flex items-center justify-center mb-4">
+                            <i data-feather="zap" class="text-zentrix-blue"></i>
+                        </div>
+                        <h4 class="font-semibold mb-2">Eficiência</h4>
+                        <p class="text-sm text-gray-300">Soluções que aumentam a produtividade em até 300%.</p>
+                    </div>
+                    <div class="bg-zentrix-dark/50 border border-zentrix-purple/10 rounded-xl p-6 hover:border-zentrix-blue/30 transition">
+                        <div class="w-12 h-12 bg-zentrix-purple/10 rounded-lg flex items-center justify-center mb-4">
+                            <i data-feather="refresh-cw" class="text-zentrix-purple"></i>
+                        </div>
+                        <h4 class="font-semibold mb-2">Atualizações Constantes</h4>
+                        <p class="text-sm text-gray-300">Melhorias contínuas através de atualizações OTA.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Section -->
+    <section id="product" class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-zentrix-dark to-zentrix-dark/90">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                    <span class="gradient-text">Z-RX9000</span>
+                </h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-zentrix-blue to-zentrix-purple mx-auto mb-6"></div>
+                <p class="text-gray-300 max-w-3xl mx-auto text-lg">
+                    O futuro da automação e inteligência artificial em um único dispositivo.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+                <div class="bg-zentrix-dark/50 border border-zentrix-purple/10 rounded-xl p-8" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 bg-zentrix-blue/10 rounded-lg flex items-center justify-center mr-4">
+                            <i data-feather="eye" class="text-zentrix-blue"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Visão Computacional</h3>
+                    </div>
+                    <p class="text-gray-300">
+                        Sistema de visão 360° com reconhecimento de objetos em tempo real e capacidade de navegação autônoma em ambientes complexos.
+                    </p>
+                </div>
+                <div class="bg-zentrix-dark/50 border border-zentrix-purple/10 rounded-xl p-8" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 bg-zentrix-purple/10 rounded-lg flex items-center justify-center mr-4">
+                            <i data-feather="cpu" class="text-zentrix-purple"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Processamento Quântico</h3>
+                    </div>
+                    <p class="text-gray-300">
+                        Unidade de processamento quântico que permite resolver problemas complexos em segundos, com consumo energético mínimo.
+                    </p>
+                </div>
+                <div class="bg-zentrix-dark/50 border border-zentrix-purple/10 rounded-xl p-8" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 bg-zentrix-blue/10 rounded-lg flex items-center justify-center mr-4">
+                            <i data-feather="activity" class="text-zentrix-blue"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Aprendizado Contínuo</h3>
+                    </div>
+                    <p class="text-gray-300">
+                        Algoritmos de deep learning que evoluem com o tempo, adaptando-se às necessidades específicas de cada ambiente de trabalho.
+                    </p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mt-12">
+                <div data-aos="fade-right">
+                    <img src="http://static.photos/technology/640x360/2" alt="Z-RX9000 Interface" class="rounded-xl w-full glow-effect">
+                </div>
+                <div data-aos="fade-left">
+                    <h3 class="text-2xl font-semibold mb-4 text-zentrix-blue">Especificações Técnicas</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 h-5 w-5 text-zentrix-blue">
+                                <i data-feather="check-circle"></i>
+                            </div>
+                            <p class="ml-3 text-gray-300"><span class="font-medium">Processador:</span> Quantum X8 (128 qubits)</p>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 h-5 w-5 text-zentrix-blue">
+                                <i data-feather="check-circle"></i>
+                            </div>
+                            <p class="ml-3 text-gray-300"><span class="font-medium">Memória:</span> 1TB RAM Neural</p>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 h-5 w-5 text-zentrix-blue">
+                                <i data-feather="check-circle"></i>
+                            </div>
+                            <p class="ml-3 text-gray-300"><span class="font-medium">Armazenamento:</span> 10PB SSD Quântico</p>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 h-5 w-5 text-zentrix-blue">
+                                <i data-feather="check-circle"></i>
+                            </div>
+                            <p class="ml-3 text-gray-300"><span class="font-medium">Sensores:</span> 48 sensores multi-espectrais</p>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 h-5 w-5 text-zentrix-blue">
+                                <i data-feather="check-circle"></i>
+                            </div>
+                            <p class="ml-3 text-gray-300"><span class="font-medium">Autonomia:</span> 72h (recarga solar opcional)</p>
+                        </li>
+                    </ul>
+                    <button class="mt-8 px-6 py-3 rounded-md text-sm font-medium bg-gradient-to-r from-zentrix-blue to-zentrix-purple text-white hover:opacity-90 transition glow-effect">
+                        Download Ficha Técnica
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="py-20 px-4 sm:px-6 lg:px-8 bg-zentrix-dark border-t border-zentrix-purple/10">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                    <span class="gradient-text">NOSSA EQUIPE</span>
+                </h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-zentrix-blue to-zentrix-purple mx-auto mb-6"></div>
+                <p class="text-gray-300 max-w-3xl mx-auto text-lg">
+                    Especialistas apaixonados por tecnologia e inovação.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-zentrix-dark/50 border border-zentrix-purple/10 rounded-xl p-6 text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-2 border-zentrix-blue/30">
+                        <img src="fotos/fileluis.jpg" alt="CEO" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-1">Luis</h3>
+                    <p class="text-zentrix-blue mb-4">CEO & Fundador</p>
+                    <p class="text-gray-300 text-sm">
+                        Visionário em inteligência artificial com mais de 20 anos de experiência no setor.
+                    </p>
+                    <div class="flex justify-center space-x-3 mt-4">
+                        <a href="#" class="text-zentrix-blue hover:text-white transition">
+                            <i data-feather="linkedin"></i>
+                        </a>
+                        <a href="#" class="text-zentrix-blue hover:text-white transition">
+                            <i data-feather="twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="bg-zentrix-dark/50 border border-zentrix-purple/10 rounded-xl p-6 text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-2 border-zentrix-blue/30">
+                        <img src="fotos/bueno.PNG" alt="Marketing" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-1">Victor</h3>
+                    <p class="text-zentrix-blue mb-4">Diretora de Marketing</p>
+                    <p class="text-gray-300 text-sm">
+                        Especialista em branding tecnológico e estratégias de mercado inovadoras.
+                    </p>
+                    <div class="flex justify-center space-x-3 mt-4">
+                        <a href="#" class="text-zentrix-blue hover:text-white transition">
+                            <i data-feather="linkedin"></i>
+                        </a>
+                        <a href="#" class="text-zentrix-blue hover:text-white transition">
+                            <i data-feather="twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="bg-zentrix-dark/50 border border-zentrix-purple/10 rounded-xl p-6 text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-2 border-zentrix-blue/30">
+                        <img src="fotos/WhatsApp Image 2025-03-20 at 16.39.00.jpeg" alt="Programador" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-1">Gabriel</h3>
+                    <p class="text-zentrix-blue mb-4">Líder de Desenvolvimento</p>
+                    <p class="text-gray-300 text-sm">
+                        Engenheiro de software com expertise em sistemas autônomos e aprendizado de máquina.
+                    </p>
+                    <div class="flex justify-center space-x-3 mt-4">
+                        <a href="#" class="text-zentrix-blue hover:text-white transition">
+                            <i data-feather="linkedin"></i>
+                        </a>
+                        <a href="#" class="text-zentrix-blue hover:text-white transition">
+                            <i data-feather="github"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="bg-zentrix-dark/50 border border-zentrix-purple/10 rounded-xl p-6 text-center" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-2 border-zentrix-blue/30">
+                        <img src="fotos/dois.jpeg" alt="Designer" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-1">Filippe</h3>
+                    <p class="text-zentrix-blue mb-4">Designer Chefe</p>
+                    <p class="text-gray-300 text-sm">
+                        Criadora de interfaces intuitivas e experiências de usuário revolucionárias.
+                    </p>
+                    <div class="flex justify-center space-x-3 mt-4">
+                        <a href="#" class="text-zentrix-blue hover:text-white transition">
+                            <i data-feather="linkedin"></i>
+                        </a>
+                        <a href="#" class="text-zentrix-blue hover:text-white transition">
+                            <i data-feather="dribbble"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-zentrix-dark/90 to-zentrix-dark">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                    <span class="gradient-text">NOSSOS SERVIÇOS</span>
+                </h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-zentrix-blue to-zentrix-purple mx-auto mb-6"></div>
+                <p class="text-gray-300 max-w-3xl mx-auto text-lg">
+                    Soluções robóticas personalizadas para diversas indústrias.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-zentrix-dark/50 border border-zentrix-purple/10 rounded-xl p-8 hover:border-zentrix-blue/30 transition group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-zentrix-blue/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-zentrix-blue/20 transition">
+                        <i data-feather="package" class="text-zentrix-blue text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Automação Industrial</h3>
+                    <p class="text-gray-300 mb-4">
+                        Sistemas robóticos completos para linhas de produção, aumentando eficiência e reduzindo custos.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li class="flex items-center">
+                            <i data-feather="check" class="w-4 h-4 mr-2 text-zentrix-blue"></i>
+                            Montagem automatizada
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="check" class="w-4 h-4 mr-2 text-zentrix-blue"></i>
+                            Controle de qualidade
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="check" class="w-4 h-4 mr-2 text-zentrix-blue"></i>
+                            Logística inteligente
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-zentrix-dark/50 border border-zentrix-purple/10 rounded-xl p-8 hover:border-zentrix-blue/30 transition group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-zentrix-purple/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-zentrix-purple/20 transition">
+                        <i data-feather="heart" class="text-zentrix-purple text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Robótica Médica</h3>
+                    <p class="text-gray-300 mb-4">
+                        Assistência cirúrgica de precisão e sistemas de diagnóstico avançados para instituições de saúde.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li class="flex items-center">
+                            <i data-feather="check" class="w-4 h-4 mr-2 text-zentrix-purple"></i>
+                            Cirurgias assistidas
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="check" class="w-4 h-4 mr-2 text-zentrix-purple"></i>
+                            Reabilitação robótica
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="check" class="w-4 h-4 mr-2 text-zentrix-purple"></i>
+                            Telemedicina avançada
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-zentrix-dark/50 border border-zentrix-purple/10 rounded-xl p-8 hover:border-zentrix-blue/30 transition group" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 bg-zentrix-blue/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-zentrix-blue/20 transition">
+                        <i data-feather="home" class="text-zentrix-blue text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Robótica Doméstica</h3>
+                    <p class="text-gray-300 mb-4">
+                        Assistentes pessoais inteligentes que transformam a maneira como vivemos em nossos lares.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li class="flex items-center">
+                            <i data-feather="check" class="w-4 h-4 mr-2 text-zentrix-blue"></i>
+                            Automação residencial
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="check" class="w-4 h-4 mr-2 text-zentrix-blue"></i>
+                            Segurança inteligente
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="check" class="w-4 h-4 mr-2 text-zentrix-blue"></i>
+                            Cuidados com idosos
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-4 sm:px-6 lg:px-8 bg-zentrix-dark border-t border-zentrix-purple/10">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                    <span class="gradient-text">FALE CONOSCO</span>
+                </h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-zentrix-blue to-zentrix-purple mx-auto mb-6"></div>
+                <p class="text-gray-300 max-w-3xl mx-auto text-lg">
+                    Estamos prontos para transformar suas ideias em realidade.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div data-aos="fade-right">
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-300 mb-1">Nome Completo</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 bg-zentrix-dark/50 border border-zentrix-purple/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-zentrix-blue focus:border-transparent text-white placeholder-gray-500 transition">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-300 mb-1">E-mail</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 bg-zentrix-dark/50 border border-zentrix-purple/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-zentrix-blue focus:border-transparent text-white placeholder-gray-500 transition">
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-gray-300 mb-1">Assunto</label>
+                            <select id="subject" class="w-full px-4 py-3 bg-zentrix-dark/50 border border-zentrix-purple/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-zentrix-blue focus:border-transparent text-white placeholder-gray-500 transition">
+                                <option>Selecione um assunto</option>
+                                <option>Consulta sobre produtos</option>
+                                <option>Suporte técnico</option>
+                                <option>Parcerias comerciais</option>
+                                <option>Outros</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-300 mb-1">Mensagem</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-3 bg-zentrix-dark/50 border border-zentrix-purple/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-zentrix-blue focus:border-transparent text-white placeholder-gray-500 transition"></textarea>
+                        </div>
+                        <button type="submit" class="w-full px-6 py-3 rounded-md text-sm font-medium bg-gradient-to-r from-zentrix-blue to-zentrix-purple text-white hover:opacity-90 transition glow-effect">
+                            Enviar Mensagem
+                        </button>
+                    </form>
+                </div>
+                
+                <div data-aos="fade-left">
+                    <div class="bg-zentrix-dark/50 border border-zentrix-purple/10 rounded-xl p-8 h-full">
+                        <h3 class="text-xl font-semibold mb-6 text-zentrix-blue">Informações de Contato</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 h-10 w-10 bg-zentrix-blue/10 rounded-lg flex items-center justify-center mr-4">
+                                    <i data-feather="mail" class="text-zentrix-blue"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-300">E-mail</h4>
+                                    <p class="text-gray-400">contato@zentrixrobotics.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 h-10 w-10 bg-zentrix-purple/10 rounded-lg flex items-center justify-center mr-4">
+                                    <i data-feather="phone" class="text-zentrix-purple"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-300">Telefone</h4>
+                                    <p class="text-gray-400">+55 (11) 99999-9999</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 h-10 w-10 bg-zentrix-blue/10 rounded-lg flex items-center justify-center mr-4">
+                                    <i data-feather="map-pin" class="text-zentrix-blue"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-300">Endereço</h4>
+                                    <p class="text-gray-400">Av. Paulista, 1000<br>São Paulo - SP, Brasil</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <h3 class="text-xl font-semibold mt-10 mb-4 text-zentrix-blue">Redes Sociais</h3>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-10 h-10 bg-zentrix-dark border border-zentrix-purple/20 rounded-full flex items-center justify-center hover:bg-zentrix-blue/10 hover:border-zentrix-blue/30 transition">
+                                <i data-feather="facebook" class="text-zentrix-blue"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-zentrix-dark border border-zentrix-purple/20 rounded-full flex items-center justify-center hover:bg-zentrix-blue/10 hover:border-zentrix-blue/30 transition">
+                                <i data-feather="twitter" class="text-zentrix-blue"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-zentrix-dark border border-zentrix-purple/20 rounded-full flex items-center justify-center hover:bg-zentrix-blue/10 hover:border-zentrix-blue/30 transition">
+                                <i data-feather="linkedin" class="text-zentrix-blue"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-zentrix-dark border border-zentrix-purple/20 rounded-full flex items-center justify-center hover:bg-zentrix-blue/10 hover:border-zentrix-blue/30 transition">
+                                <i data-feather="instagram" class="text-zentrix-blue"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-zentrix-dark border border-zentrix-purple/20 rounded-full flex items-center justify-center hover:bg-zentrix-blue/10 hover:border-zentrix-blue/30 transition">
+                                <i data-feather="youtube" class="text-zentrix-blue"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-zentrix-dark/90 border-t border-zentrix-purple/10 py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold gradient-text mb-4">ZENTRIX</h3>
+                    <p class="text-gray-400 text-sm">
+                        Pioneiros em soluções robóticas inteligentes para um futuro mais eficiente e conectado.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-sm font-semibold text-zentrix-blue uppercase tracking-wider mb-4">Links Rápidos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition text-sm">Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition text-sm">Sobre</a></li>
+                        <li><a href="#product" class="text-gray-400 hover:text-white transition text-sm">Produtos</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition text-sm">Serviços</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition text-sm">Contato</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-sm font-semibold text-zentrix-blue uppercase tracking-wider mb-4">Produtos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition text-sm">Z-RX9000</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition text-sm">Z-AI Core</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition text-sm">Automation Suite</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition text-sm">Vision Systems</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-sm font-semibold text-zentrix-blue uppercase tracking-wider mb-4">Newsletter</h4>
+                    <p class="text-gray-400 text-sm mb-4">
+                        Assine nossa newsletter para receber as últimas novidades.
+                    </p>
+                    <div class="flex">
+                        <input type="email" placeholder="Seu e-mail" class="px-4 py-2 bg-zentrix-dark/50 border border-zentrix-purple/20 rounded-l-lg focus:outline-none focus:ring-1 focus:ring-zentrix-blue focus:border-transparent text-white placeholder-gray-500 text-sm w-full">
+                        <button class="px-4 py-2 bg-gradient-to-r from-zentrix-blue to-zentrix-purple text-white rounded-r-lg text-sm hover:opacity-90 transition">
+                            <i data-feather="send"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-zentrix-purple/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 text-sm">
+                    © 2023 Zentrix Robotics. Todos os direitos reservados.
+                </p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-500 hover:text-white transition text-sm">Termos de Serviço</a>
+                    <a href="#" class="text-gray-500 hover:text-white transition text-sm">Política de Privacidade</a>
+                    <a href="#" class="text-gray-500 hover:text-white transition text-sm">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+        
+        feather.replace();
+        
+        // Mobile menu toggle
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            const icon = mobileMenuButton.querySelector('svg');
+            if (icon.getAttribute('data-feather') === 'menu') {
+                feather.icons['x'].toSvg().then(svg => {
+                    icon.outerHTML = svg;
+                });
+                // Show mobile menu
+            } else {
+                feather.icons['menu'].toSvg().then(svg => {
+                    icon.outerHTML = svg;
+                });
+                // Hide mobile menu
+            }
+        });
+    </script>
+</body>
+</html>
